@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERROR</title>
+<meta name="description" content="This wasn't supposed to exist.">
+<style>
+  :root { --red:#e10600; --bg:#000; --fg:#eee; --dim:#888; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:70px; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:"Courier New",monospace; line-height:1.6; }
+  a { color:var(--red); text-decoration:none; }
+  main, section { max-width:960px; margin:0 auto; padding:2rem 1rem; }
+
+  .scanlines { position:fixed; inset:0; pointer-events:none; z-index:50;
+    background:repeating-linear-gradient(transparent 0 2px, rgba(255,255,255,.03) 2px 4px); }
+
+  /* NAV */
+  .nav { position:sticky; top:0; z-index:40; background:#000; display:flex; flex-wrap:wrap; gap:1rem;
+    align-items:center; justify-content:space-between; padding:1rem; border-bottom:1px solid var(--red); }
+  .logo { font-size:1.5rem; font-weight:bold; letter-spacing:.2em; color:#fff; }
+  .nav nav { display:flex; flex-wrap:wrap; gap:1rem; font-size:.85rem; letter-spacing:.1em; }
+  .nav nav a { color:var(--fg); }
+  .nav nav a:hover { color:var(--red); }
+
+  /* TYPE */
+  .code { color:var(--red); font-size:.8rem; letter-spacing:.2em; margin:0; }
+  .hero { text-align:center; padding:5rem 1rem 3rem; }
+  .tagline { color:var(--dim); font-size:1.2rem; margin-bottom:2rem; }
+  .glitch { position:relative; display:inline-block; color:#fff; font-size:2.5rem; letter-spacing:.15em;
+    margin:.5rem 0; text-shadow:2px 0 var(--red), -2px 0 #fff4; }
+  .glitch.big { font-size:clamp(4rem,18vw,9rem); }
+  .glitch::before { content:attr(data-text); position:absolute; left:0; top:0; width:100%;
+    color:var(--red); clip-path:inset(0 0 60% 0); animation:glitch 3s infinite steps(1); }
+  @keyframes glitch {
+    0%,90%,100% { transform:translate(0); }
+    92% { transform:translate(-4px,1px); }
+    94% { transform:translate(4px,-1px); }
+    96% { transform:translate(-2px,0); }
+  }
+
+  .stripe { height:10px; margin:2rem 0;
+    background:repeating-linear-gradient(-45deg,var(--red) 0 10px,#000 10px 20px); }
+
+  /* CARDS + BUTTONS */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+  .card { display:block; border:1px solid var(--red); padding:1.2rem; color:var(--fg); }
+  .card:hover { background:var(--red); color:#000; }
+  .card h2 { margin:0 0 .3rem; letter-spacing:.15em; font-size:1.2rem; }
+  .card p { margin:0; }
+  .btn { display:inline-block; background:var(--red); color:#000; padding:.8rem 1.4rem;
+    font-weight:bold; letter-spacing:.1em; }
+  .btn:hover { background:#fff; }
+
+  /* SECTIONS */
+  .items { list-style:none; padding:0; }
+  .status { color:var(--dim); font-size:.85rem; }
+  .footer { text-align:center; color:var(--dim); font-size:.75rem; padding:0 1rem 2rem; }
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+
+<header class="nav">
+  <a href="#top" class="logo">ERROR</a>
+  <nav>
+    <a href="#merch">MERCH</a>
+    <a href="#media">MEDIA</a>
+    <a href="#archives">ARCHIVES</a>
+    <a href="#community">COMMUNITY</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="top">
+  <p class="code">SYSTEM STATUS: UNSTABLE</p>
+  <h1 class="glitch big" data-text="ERROR">ERROR</h1>
+  <p class="tagline">This wasn't supposed to exist.</p>
+  <a class="btn" href="#archives">ENTER THE ARCHIVES</a>
+</section>
+
+<div class="stripe"></div>
+
+<section class="grid">
+  <a class="card" href="#merch"><h2>MERCH</h2><p>Wear the evidence.</p></a>
+  <a class="card" href="#media"><h2>MEDIA</h2><p>Videos, streams, horror, games.</p></a>
+  <a class="card" href="#archives"><h2>ARCHIVES</h2><p>Recovered files. Handle with care.</p></a>
+  <a class="card" href="#community"><h2>COMMUNITY</h2><p>The ERROR network.</p></a>
+  <a class="card" href="#projects"><h2>PROJECTS</h2><p>Bigger things in progress.</p></a>
+  <a class="card" href="#about"><h2>ABOUT</h2><p>What ERROR actually is.</p></a>
+</section>
+
+<div class="stripe"></div>
+
+<!-- MERCH -->
+<section id="merch">
+  <p class="code">ERROR_MERCH</p>
+  <h2 class="glitch" data-text="MERCH">MERCH</h2>
+  <p>Physical evidence from the ERROR universe.</p>
+  <ul class="items">
+    <li>&gt; Clothing</li>
+    <li>&gt; Accessories</li>
+    <li>&gt; Plushies</li>
+    <li>&gt; Limited drops</li>
+    <li>&gt; Upcoming releases</li>
+  </ul>
+  <!-- Replace # with your Fourthwall store link -->
+  <a class="btn" href="#">OPEN THE STORE</a>
+</section>
+
+<div class="stripe"></div>
+
+<!-- MEDIA -->
+<section id="media">
+  <p class="code">ERROR_MEDIA</p>
+  <h2 class="glitch" data-text="MEDIA">MEDIA</h2>
+  <p>Content from inside the glitch.</p>
+  <ul class="items">
+    <li>&gt; <a href="#">YouTube</a></li>
+    <li>&gt; <a href="#">TikTok</a></li>
+    <li>&gt; Horror content</li>
+    <li>&gt; Gaming</li>
+    <li>&gt; Livestreams</li>
+  </ul>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ARCHIVES -->
+<section id="archives">
+  <p class="code">ERROR_ARCHIVES</p>
+  <h2 class="glitch" data-text="ARCHIVES">ARCHIVES</h2>
+  <p>Recovered files. Some of them should have stayed buried.</p>
+  <ul class="items">
+    <li>&gt; ERROR_001 [LOCKED]</li>
+    <li>&gt; ERROR_002 [LOCKED]</li>
+    <li>&gt; ERROR_003 [ACCESS DENIED]</li>
+  </ul>
+  <p class="status">STATUS: COMING ONLINE</p>
+</section>
+
+<div class="stripe"></div>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <p class="code">ERROR_NETWORK</p>
+  <h2 class="glitch" data-text="COMMUNITY">COMMUNITY</h2>
+  <p>You found the network.</p>
+  <ul class="items">
+    <li>&gt; <a href="#">Discord</a></li>
+    <li>&gt; Stream schedule</li>
+    <li>&gt; Announcements</li>
+    <li>&gt; Community events</li>
+  </ul>
+</section>
+
+<div class="stripe"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="code">ERROR_PROJECTS</p>
+  <h2 class="glitch" data-text="PROJECTS">PROJECTS</h2>
+  <p>Bigger creative work, in development.</p>
+  <ul class="items">
+    <li>&gt; Horror projects</li>
+    <li>&gt; Short films</li>
+    <li>&gt; Collaborations</li>
+  </ul>
+  <p class="status">STATUS: COMING ONLINE</p>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="code">ERROR_ABOUT</p>
+  <h2 class="glitch" data-text="ABOUT">ABOUT</h2>
+  <p>ERROR is a creative media and merchandise project built around the things that shouldn't exist.</p>
+</section>
+
+<footer class="footer">
+  <div class="stripe"></div>
+  <p>ERROR // THIS WASN'T SUPPOSED TO EXIST</p>
+</footer>
+
+</body>
+</html>
