@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERROR_404 // FILE NOT FOUND</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .notfound { min-height:70vh; display:flex; flex-direction:column; align-items:center;
+    justify-content:center; text-align:center; }
+  .notfound .big { font-size:clamp(5rem,22vw,11rem); }
+  .notfound .msg { color:var(--red); letter-spacing:.2em; margin:.5rem 0 0; }
+  .notfound .sub { color:var(--dim); max-width:32rem; margin:1rem auto 2rem; }
+  .blink { animation:blink 1.2s infinite steps(1); }
+  @keyframes blink { 50% { opacity:0; } }
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+
+<header class="nav">
+  <a href="/" class="logo"><img src="/assets/logo.png" alt="ERROR"></a>
+  <nav>
+    <a href="/merch.html">MERCH</a>
+    <a href="/media.html">MEDIA</a>
+    <a href="/archives.html">ARCHIVES</a>
+    <a href="/community.html">COMMUNITY</a>
+    <a href="/projects.html">PROJECTS</a>
+    <a href="/about.html">ABOUT</a>
+  </nav>
+</header>
+
+<main class="notfound">
+  <p class="code">ERROR_404</p>
+  <h1 class="glitch big" data-text="404">404</h1>
+  <p class="msg">FILE NOT FOUND<span class="blink">_</span></p>
+  <p class="sub">The file you requested was deleted, moved, or never existed.
+     Some things aren't supposed to be found.</p>
+  <a class="btn" href="/">RETURN TO SAFETY</a>
+</main>
+
+<footer class="footer">
+  <div class="stripe"></div>
+  <p>ERROR // THIS WASN'T SUPPOSED TO EXIST</p>
+</footer>
+
+</body>
+</html>
