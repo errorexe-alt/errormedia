@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERROR_003 // ERROR ARCHIVES</title>
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .file h4 { color:var(--red); letter-spacing:.15em; margin:1.5rem 0 .3rem; }
+  .file ul { margin:.3rem 0; padding-left:1.2rem; }
+  .media-slot { border:1px dashed var(--dim); padding:2rem 1rem; text-align:center; color:var(--dim); }
+  .signature { margin-top:2rem; text-align:right; color:var(--dim); letter-spacing:.2em; font-size:.8rem; }
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+
+<header class="nav">
+  <a href="../index.html" class="logo"><img src="../assets/logo.png" alt="ERROR"></a>
+  <nav>
+    <a href="../merch.html">MERCH</a>
+    <a href="../media.html">MEDIA</a>
+    <a href="../archives.html">ARCHIVES</a>
+    <a href="../community.html">COMMUNITY</a>
+    <a href="../projects.html">PROJECTS</a>
+    <a href="../about.html">ABOUT</a>
+  </nav>
+</header>
+
+<main>
+  <p class="code">ERROR ARCHIVES // THE REJECTED</p>
+  <h1 class="glitch" data-text="ERROR_003">ERROR_003</h1>
+
+  <div id="vault">
+    <form class="gate" id="gate">
+      <p class="status">THIS FILE IS ENCRYPTED. ACCESS CODE REQUIRED.</p>
+      <label for="code">ENTER FILE ACCESS CODE</label>
+      <input id="code" type="text" placeholder="XXXX-XXXX" autocomplete="off" spellcheck="false">
+      <button class="btn" type="submit" id="go">ACCESS FILE</button>
+      <p class="denied" id="msg"></p>
+    </form>
+  </div>
+</main>
+
+<script>
+const DATA = { salt:"w6r9XCSnt5+Fk+YUQzdA8Q==", iv:"nbZ5AnZHr1NLfunJ", ct:"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" };
+const KEY_NAME = "error_003_code";
+const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const norm = s => s.toUpperCase().replace(/[^A-Z0-9]/g, "");
+
+async function decryptWith(code) {
+  const enc = new TextEncoder();
+  const mat = await crypto.subtle.importKey("raw", enc.encode(norm(code)), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey(
+    { name:"PBKDF2", salt:b64d(DATA.salt), iterations:600000, hash:"SHA-256" },
+    mat, { name:"AES-GCM", length:256 }, false, ["decrypt"]);
+  const pt = await crypto.subtle.decrypt({ name:"AES-GCM", iv:b64d(DATA.iv) }, key, b64d(DATA.ct));
+  return new TextDecoder().decode(pt);
+}
+
+async function unlock(code, remember) {
+  const html = await decryptWith(code);
+  document.getElementById("vault").innerHTML = html;
+  if (remember) { try { localStorage.setItem(KEY_NAME, code); } catch (e) {} }
+}
+
+document.getElementById("gate").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const msg = document.getElementById("msg"), btn = document.getElementById("go");
+  msg.textContent = ""; btn.disabled = true; btn.textContent = "VERIFYING...";
+  try { await unlock(document.getElementById("code").value, true); }
+  catch (err) { msg.textContent = "ACCESS DENIED"; btn.disabled = false; btn.textContent = "ACCESS FILE"; }
+});
+
+(async () => {
+  try {
+    const saved = localStorage.getItem(KEY_NAME);
+    if (saved) await unlock(saved, false);
+  } catch (e) {}
+})();
+</script>
+
+<footer class="footer">
+  <div class="stripe"></div>
+  <p>ERROR // THIS WASN'T SUPPOSED TO EXIST</p>
+</footer>
+
+</body>
+</html>
